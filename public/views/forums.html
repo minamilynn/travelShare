@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+  <head>
+    <title>Travel Share - Posts</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="utf-8"/>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  
+  <body onload = "javascript:initialize()"> 
+ 
+    <form action = "#" >
+
+      <div class="dropdown">
+        
+        <div id="menu_dropdown" class="menu">
+          <select id="menu" name="continents" onchange=ready()>
+          <option value="Africa">Africa</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Asia">Asia</option>
+          <option value="Australia">Australia</option>
+          <option value="Europe">Europe</option>
+          <option value="North-America">North America</option>
+          <option value="South-America">South America</option>
+        </select>
+           <h2 id="continent_name"></h2>
+        </div>
+      </div>
+
+     </form>
+
+          <script  type="text/javascript">
+     function initialize ()
+     {
+      $.ajax({
+        url: "/readButton",
+        type: "GET",            
+         data: null,
+         success: function(data){
+          if (data!= null)
+             {
+                if (data.continent!="")
+                {
+                  console.log (data)
+                  $("#menu").val(data.continent)
+                  $("#menu").change()
+                }  
+              }
+           },     
+           dataType: "json"
+        }); 
+     }
+      </script>
+      <ul id='form'></ul> 
+	 <script src="js/forums.js"></script>
+  </body>
+</html>  
