@@ -1,32 +1,24 @@
----
+# Travel Share
 
 **Authors:**  Minami Jones, Briana Ramos Hernandez, Katherine Howells
+
 **Instructor:** Jeffery Yee
+
 **Course:** Web Programming (Spring 2023–2024, Mission Vista High School)
 
----
-## Project Description
+A full-stack web application designed to provide basic information about continents and allow users to share travel experiences and images through a simple interactive interface.
 
-travelShare is a full-stack web application designed to provide basic information about continents and allow users to share travel experiences and images through a simple interactive interface.
+## Server Setup Guide
 
-# Server Setup Guide
-
-## Overview
-
-This project is a Node.js + Express web application for the travelShare platform. It runs a local development server that serves the frontend and backend functionality.
-
-## Requirements
+This project is a Node.js + Express web application. It runs a local development server that serves both the frontend and backend functionality.
 
 Make sure you have installed:
 
-* Node.js (recommended LTS version)
+[Node.js](https://nodejs.org/en) (recommended LTS version)
 
----
+The server runs on **Port 3003** by default
 
-## Default Server Port
-
-* The server runs on **Port 3003** by default
-* If 3003 is in use, it may fall back to another port depending on configuration
+If 3003 is in use, it may fall back to another port depending on configuration
 
 ---
 
@@ -86,18 +78,3 @@ http://localhost:3003
 
 ---
 
-## Notes
-
-* Make sure no other application is using port 3003
-* If the server does not start, ensure all dependencies are installed using `npm install`
-* Keep the terminal open while using the website
-
----
-
-## Troubleshooting
-
-* **"Cannot find module 'express'"** → run `npm install`
-* **Port already in use** → change port in `index.js` or close conflicting application
-* **Page not loading** → confirm server is running in terminal
-
----
